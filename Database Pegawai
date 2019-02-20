@@ -1,0 +1,44 @@
+1. Membuat Database
+create database perusahaan;
+
+2. Membuat table pegawai
+
+create table pegawai
+(id_pegawai varchar (10) primary key,
+nama_depan varchar (10) not null,
+nama_belakang varchar (10) not null,
+email varchar (50) not null,
+telepon varchar (50) not null,
+tgl_kontrak varchar (15) not null,
+idjob varchar (15) not null,
+gaji varchar (10) not null,
+tunjangan varchar (10) not null)
+
+
+3. Masukan data pegawai yang akan di record
+
+insert into pegawai
+values
+(id_pegawai, nama_depan, nama_belakang , email, telepon , tgl_kontrak, idjob, gaji,  tunjangan)
+("E001","ferry","gustiawan","ferry@yahoo.com","085712347812","2005-09-01","L0001","2000000","500000")
+("E002","aris","ganiardi","aris@yahoo.com","085712347960","2006-09-01","L0002","2000000","200000")
+("E003","faiz","ahmad","faiz@yahoo.com","085711237812","2006-10-01","L0003","1500000","NULL")
+("E004","emma","bunton","emma@gmail.com","085612347812","2007-09-01","L0004","1500000","0")
+("E005","mike","scoff","mike@plasa.com","085612124812","2007-09-01","L0005","1250000","0")
+("E006","lincoln","burrows","linc@yahoo.com","085612378812","2008-09-01","L0005","1750000","NULL")
+
+4.Menampilkan gaji pegawai bukan 2.000.000 dan 1.250.000
+
+select * from pegawai
+where gaji "2000000"
+and gaji <> "1250000"
+
+5. Menampilkan pegawai dengan tunjangan NULL
+
+select * from pegawai
+where tunjangan ="NULL"
+
+6. Menampilkan pegawai dengan tunjangan tidak NULL
+
+select *from pegawai
+where tunjangan <> "NULL" 
